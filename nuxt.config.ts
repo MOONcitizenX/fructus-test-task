@@ -11,5 +11,18 @@ export default defineNuxtConfig({
       },
     },
   },
-  modules: ["@pinia/nuxt"],
+  modules: ["@pinia/nuxt", "@nuxtjs/google-fonts"],
+  googleFonts: {
+    families: {
+      Montserrat: {
+        wght: [300, 400, 800],
+        ital: [300],
+      },
+    },
+    display: "auto",
+    subsets: ["latin", "cyrillic"],
+    prefetch: true,
+    preconnect: true,
+    preload: true,
+  },
 });

@@ -7,6 +7,6 @@ div
 
 <style lang="scss">
 h1 {
-  color: $red;
+  color: $main-black;
 }
 </style>
