@@ -1,4 +1,4 @@
 <template lang="pug">
-main
+nuxt-layout
   nuxt-page
 </template>

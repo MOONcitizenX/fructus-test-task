@@ -1,0 +1,90 @@
+<script setup>
+const icons = ref(["fb", "vk", "ig", "tg"]);
+</script>
+
+<template lang="pug">
+footer(class="wrapper")
+  .footer-container.container
+    section.footer-top
+      .footer-description
+        nuxt-link(to="/")
+          img(src="/icons/logo.svg" alt="logo")
+        p.footer-description-text.
+          Cтатьи о дизайне и искусстве, которые исследуют творческие вдохновения и актуальные тенденции, раскрывая мир эстетики и креативности
+      .footer-contacts
+        .footer-contacts__email
+          p.footer-contacts__email-text email
+          p.footer-contacts__email-address testblogsupport@gmail.com
+        .footer-contacts__socials
+          nuxt-link.footer-contacts__socials-link(v-for="icon in icons" to="/")
+            img(:src="`/icons/${icon}.svg`" :alt="icon")
+    section.footer-form
+
+</template>
+
+<style lang="scss">
+.footer-container {
+}
+
+.footer-top {
+  padding: 50px 80px 70px 0;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.footer-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+  & a {
+    font-size: 0;
+  }
+  &-text {
+    max-width: 426px;
+
+    font-size: 14px;
+    font-weight: 400;
+
+    color: $main-gray;
+  }
+}
+
+.footer-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  &__email {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 2px;
+
+    &-text {
+      font-size: 14px;
+      font-weight: 400;
+
+      color: $main-gray;
+    }
+
+    &-address {
+      font-size: 18px;
+      font-weight: 400;
+
+      color: $main-black;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    &-link {
+      font-size: 0;
+    }
+  }
+}
+</style>

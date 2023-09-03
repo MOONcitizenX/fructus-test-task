@@ -9,3 +9,14 @@
 html {
   font-family: "Montserrat";
 }
+
+.wrapper {
+  max-width: $xl;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.container {
+  max-width: $lg;
+  margin: 0 auto;
+}
