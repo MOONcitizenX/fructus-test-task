@@ -1,5 +1,10 @@
 <script setup>
-const icons = ref(["fb", "vk", "ig", "tg"]);
+const icons = ref([
+  { slug: "fb", link: "#" },
+  { slug: "vk", link: "#" },
+  { slug: "ig", link: "#" },
+  { slug: "tg", link: "#" },
+]);
 </script>
 
 <template lang="pug">
@@ -16,8 +21,8 @@ footer(class="wrapper")
           p.footer-contacts__email-text email
           p.footer-contacts__email-address testblogsupport@gmail.com
         .footer-contacts__socials
-          nuxt-link.footer-contacts__socials-link(v-for="icon in icons" to="/")
-            img(:src="`/icons/${icon}.svg`" :alt="icon")
+          a.footer-contacts__socials-link(v-for="icon in icons" :href="icon.link" target="_blank")
+            img(:src="`/icons/${icon.slug}.svg`" :alt="icon.slug")
     section.footer-form
       the-subscribe-form
 
