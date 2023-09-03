@@ -19,6 +19,7 @@ footer(class="wrapper")
           nuxt-link.footer-contacts__socials-link(v-for="icon in icons" to="/")
             img(:src="`/icons/${icon}.svg`" :alt="icon")
     section.footer-form
+      the-subscribe-form
 
 </template>
 
