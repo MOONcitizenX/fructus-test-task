@@ -1,6 +1,6 @@
 <template lang="pug">
 the-header
-main(class="wrapper")
+main.wrapper
   slot
 the-footer
 </template>

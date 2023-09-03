@@ -27,7 +27,7 @@ button.button(@click="onClick" :class="{'button--black': variant === 'black', 'b
     background-color: $main-blue;
     &:hover,
     :active {
-      background-color: transparent;
+      background-color: $main-gray;
       outline: 1px solid $main-blue;
     }
   }

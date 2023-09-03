@@ -11,7 +11,15 @@ export default defineNuxtConfig({
       },
     },
   },
-  modules: ["@pinia/nuxt", "@nuxtjs/google-fonts"],
+  modules: [
+    [
+      "@pinia/nuxt",
+      {
+        autoImports: ["defineStore", "acceptHMRUpdate"],
+      },
+    ],
+    "@nuxtjs/google-fonts",
+  ],
   googleFonts: {
     families: {
       Montserrat: {
@@ -24,5 +32,8 @@ export default defineNuxtConfig({
     prefetch: true,
     preconnect: true,
     preload: true,
+  },
+  imports: {
+    dirs: ["stores"],
   },
 });

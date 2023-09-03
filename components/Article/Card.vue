@@ -1,10 +1,29 @@
 <script setup>
-defineProps(["image", "title", "slug"]);
+defineProps(["image", "title", "link"]);
 </script>
 
 <template lang="pug">
 .card-component
-  nuxt-image.card-component__image(:src="image")
+  img.card-component__image(:src="image" width="427" height="320")
   h3.card-component__title {{ title }}
-  common-button(text="Читать" :onClick="() => navigateTo({path: slug})")
+  common-button(variant="black" text="Читать" :onClick="() => navigateTo({path: link})")
 </template>
+
+<style lang="scss">
+.card-component {
+  width: 100%;
+  max-width: 427px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  &__image {
+    object-fit: cover;
+  }
+  &__title {
+    margin-bottom: 10px;
+  }
+}
+</style>

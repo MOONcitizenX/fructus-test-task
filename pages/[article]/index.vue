@@ -1,18 +1,11 @@
 <script setup>
-const baseUrl = "http://devtwit8.ru/api/v1/page";
 const { article: slug } = useRoute().params;
-
-const { data } = await useFetch(baseUrl, {
-  query: {
-    path: `/${slug}`,
-  },
-});
 
 if (!data.value) {
   console.log("NO DATA");
+  console.log(slug);
   createError({
     statusCode: 404,
-    statusMessage: "Упс, такой статьи не существует :(",
     fatal: true,
   });
 }
