@@ -1,9 +1,15 @@
 <script setup>
-const { article: slug } = useRoute().params;
+import { useFetch } from "nuxt/app";
+
+const { id } = useRoute().params;
+
+const { data } = await useFetch(API_URL, {
+  params: {
+    path: "/article-" + id,
+  },
+});
 
 if (!data.value) {
-  console.log("NO DATA");
-  console.log(slug);
   createError({
     statusCode: 404,
     fatal: true,
@@ -21,5 +27,7 @@ useHead({
 });
 </script>
 
-<template lang="pug"></template>
-~/utils/getArticlePage
+<template lang="pug">
+div {{ data.meta.title }}
+
+</template>

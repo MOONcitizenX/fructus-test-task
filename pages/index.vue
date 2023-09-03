@@ -1,16 +1,20 @@
 <script setup>
-const store = useHomePageStore();
+import { useFetch } from "nuxt/app";
 
-onMounted(() => {
-  store.fetchData();
+const { data } = await useFetch(API_URL, {
+  params: {
+    path: "/",
+  },
 });
 
+onMounted(() => console.log(data.value));
+
 useHead({
-  title: store.meta.title,
+  title: data.value.meta.title,
   meta: [
     {
       name: "description",
-      content: store.meta.description,
+      content: data.value.meta.description,
     },
   ],
 });
@@ -18,7 +22,7 @@ useHead({
 
 <template lang="pug">
 .cards-container.container
-  article-card(v-for="article in store.articles" :key="article.link" :image="article.image" :title="article.title" :link="article.link")
+  article-card(v-for="article in data.body[0].data.articles" :key="article.link" :image="article.image" :title="article.title" :link="article.link")
 </template>
 
 <style lang="scss">

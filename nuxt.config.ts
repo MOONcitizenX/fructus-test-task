@@ -34,6 +34,6 @@ export default defineNuxtConfig({
     preload: true,
   },
   imports: {
-    dirs: ["stores"],
+    dirs: ["stores", "utils"],
   },
 });
