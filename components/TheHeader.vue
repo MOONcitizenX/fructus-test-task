@@ -8,6 +8,7 @@ header(class="wrapper")
 <style lang="scss">
 .header-container {
   padding: 28px 0 25px;
+  margin-bottom: 30px;
 
   display: flex;
   justify-content: center;

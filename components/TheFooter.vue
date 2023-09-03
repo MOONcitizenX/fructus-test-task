@@ -8,7 +8,7 @@ const icons = ref([
 </script>
 
 <template lang="pug">
-footer(class="wrapper")
+footer.wrapper.footer-wrapper
   .footer-container.container
     section.footer-top
       .footer-description
@@ -29,7 +29,8 @@ footer(class="wrapper")
 </template>
 
 <style lang="scss">
-.footer-container {
+.footer-wrapper {
+  border-top: 1px solid $main-gray;
 }
 
 .footer-top {

@@ -28,5 +28,7 @@ useHead({
   grid-auto-rows: 1fr;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
+
+  margin-bottom: 200px;
 }
 </style>

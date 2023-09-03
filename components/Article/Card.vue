@@ -24,6 +24,11 @@ defineProps(["image", "title", "link"]);
   }
   &__title {
     margin-bottom: 10px;
+
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 30px;
+    color: $main-black;
   }
 }
 </style>
