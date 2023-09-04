@@ -15,6 +15,9 @@ section.section.image-section
   gap: 15px;
 
   &__image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
     border-top-right-radius: 20%;
   }
 
