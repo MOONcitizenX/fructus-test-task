@@ -7,7 +7,8 @@ const handleClearError = () => {
 <template lang="pug">
 .error
   .error-block
-    p
+    h2 Упс, кажется, такой страницы нет :(
+    common-button( text="На главную" :onClick="() => navigateTo({path: '/'})")
 </template>
 
 <style lang="scss">
@@ -18,8 +19,17 @@ const handleClearError = () => {
   display: flex;
   justify-content: center;
   align-items: center;
-  & p {
-    color: red;
+
+  &-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+
+    & h2 {
+      color: red;
+    }
   }
 }
 </style>
