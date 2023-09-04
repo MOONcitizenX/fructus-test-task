@@ -15,8 +15,6 @@
     "vite-plugin-pug": "^0.3.2"
   },
   "dependencies": {
-    "@pinia/nuxt": "^0.4.11",
-    "nuxt-swiper": "^1.2.2",
-    "pinia": "^2.1.6"
+    "nuxt-swiper": "^1.2.2"
   }
 }

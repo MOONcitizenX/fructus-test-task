@@ -1,4 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+
 export default defineNuxtConfig({
   devtools: { enabled: false },
   css: ["@/assets/scss/global.scss"],
@@ -11,19 +12,10 @@ export default defineNuxtConfig({
       },
     },
   },
-  modules: [
-    [
-      "@pinia/nuxt",
-      {
-        autoImports: ["defineStore", "acceptHMRUpdate"],
-      },
-    ],
-    "nuxt-swiper",
-  ],
+  modules: ["nuxt-swiper"],
   imports: {
-    dirs: ["stores", "utils"],
+    dirs: ["utils"],
   },
-
   app: {
     head: {
       charset: "utf-8",
