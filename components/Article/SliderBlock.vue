@@ -7,7 +7,7 @@ const modules = [Navigation, Pagination, A11y, EffectFade];
 </script>
 
 <template lang="pug">
-swiper.swiper(:modules="modules" :slides-per-view="1" :pagination="{type: 'fraction',}" navigation loop effect="fade")
+swiper.swiper.section(:modules="modules" :slides-per-view="1" :pagination="{type: 'fraction',}" navigation loop effect="fade")
   swiper-slide(v-for="(slide, idx) in data" :key="idx")
     img.swiper__image(:src="slide")
 </template>

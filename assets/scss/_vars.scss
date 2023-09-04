@@ -8,9 +8,34 @@ $main-blue: #3657d3;
 $transition: 0.2s ease-in-out;
 
 //sizes
-$xl: 1920px;
-$lg: 1380px;
-$md: 768px;
-$sm: 480px;
+$screen-xl: 1920px;
+$screen-lg: 1380px;
+$screen-md: 768px;
+$screen-sm: 480px;
 
-// mixins
+// Small devices
+@mixin sm {
+  @media (max-width: $screen-sm) {
+    @content;
+  }
+}
+// Medium devices
+@mixin md {
+  @media (max-width: $screen-md) {
+    @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (max-width: $screen-lg) {
+    @content;
+  }
+}
+
+// Custums mixin for rexponsive neadia screen
+@mixin responsive($width) {
+  @media (max-width: #{$width}px) {
+    @content;
+  }
+}

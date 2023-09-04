@@ -28,16 +28,35 @@ form.section.subscribe-form(@submit.prevent)
 
   background-color: $main-black;
 
+  @include responsive(960) {
+    flex-direction: column;
+    gap: 16px;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
   &__title {
     font-size: 22px;
     font-weight: 800;
     line-height: 30px;
     color: $main-white;
+
+    @include md {
+      font-size: 16px;
+      line-height: 22px;
+    }
   }
 
   &__input-block {
     display: flex;
     gap: 37px;
+
+    @include md {
+      flex-direction: column;
+      gap: 16px;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
   }
 }
 </style>

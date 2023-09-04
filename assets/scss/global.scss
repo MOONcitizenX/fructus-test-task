@@ -11,13 +11,15 @@ html {
 }
 
 .wrapper {
-  max-width: $xl;
+  width: 100%;
+  max-width: $screen-xl;
   margin: 0 auto;
   padding: 0 20px;
 }
 
 .container {
-  max-width: $lg;
+  width: 100%;
+  max-width: $screen-lg;
   margin: 0 auto;
 }
 

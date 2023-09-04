@@ -39,6 +39,15 @@ footer.wrapper.footer-wrapper
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+
+  @include md {
+    flex-direction: column;
+    gap: 16px;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    padding: 30px 0 50px;
+  }
 }
 
 .footer-description {
@@ -56,6 +65,11 @@ footer.wrapper.footer-wrapper
     font-weight: 400;
 
     color: $main-gray;
+
+    @include md {
+      font-size: 12px;
+      line-height: 16px;
+    }
   }
 }
 
@@ -63,6 +77,10 @@ footer.wrapper.footer-wrapper
   display: flex;
   flex-direction: column;
   gap: 24px;
+
+  @include md {
+    width: 100%;
+  }
   &__email {
     display: flex;
     flex-direction: column;
@@ -81,6 +99,11 @@ footer.wrapper.footer-wrapper
       font-weight: 400;
 
       color: $main-black;
+
+      @include md {
+        font-size: 12px;
+        line-height: 16px;
+      }
     }
   }
 
@@ -89,6 +112,7 @@ footer.wrapper.footer-wrapper
     justify-content: flex-start;
     align-items: center;
     gap: 20px;
+
     &-link {
       font-size: 0;
     }

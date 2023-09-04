@@ -11,9 +11,16 @@ section.section.text-section(v-html="data")
   width: 66%;
   margin-left: auto;
   margin-right: auto;
+  @include md {
+    width: 100%;
+  }
 
   h2 {
     margin: 0 0 50px;
+    @include md {
+      font-size: 18px;
+      line-height: 24px;
+    }
   }
 
   p {
@@ -24,10 +31,21 @@ section.section.text-section(v-html="data")
     &:last-of-type {
       margin: 20px 0 0;
     }
+    @include md {
+      font-size: 14px;
+      line-height: 18px;
+    }
   }
 
   ul {
-    padding: 0 0 0 115px;
+    padding-left: 115px;
+
+    @include lg {
+      padding-left: 30px;
+    }
+    @include md {
+      padding-left: 10px;
+    }
     li {
       display: flex;
       position: relative;
@@ -44,13 +62,10 @@ section.section.text-section(v-html="data")
     position: relative;
 
     &::before {
-      content: "";
+      content: url("/icons/quotes.svg");
       position: absolute;
       top: 0;
       left: 0;
-      width: 80px;
-      height: 55px;
-      background: url("/icons/quotes.svg") no-repeat;
     }
 
     p,
@@ -66,6 +81,10 @@ section.section.text-section(v-html="data")
       line-height: 20px;
       color: $main-gray;
       margin: 20px 0 0;
+      @include md {
+        font-size: 10px;
+        line-height: 14px;
+      }
     }
   }
 }

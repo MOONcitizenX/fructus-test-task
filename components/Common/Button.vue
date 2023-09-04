@@ -23,6 +23,11 @@ button.button(@click="onClick" :class="{'button--black': variant === 'black', 'b
   border-radius: 2px;
 
   transition: all $transition;
+
+  @include md {
+    font-size: 14px;
+    line-height: 18px;
+  }
   &--blue {
     background-color: $main-blue;
     &:hover,

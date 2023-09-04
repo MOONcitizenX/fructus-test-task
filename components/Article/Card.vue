@@ -20,6 +20,7 @@ defineProps(["image", "title", "link"]);
   align-items: flex-start;
   gap: 20px;
   &__image {
+    width: 100%;
     object-fit: cover;
   }
   &__title {
@@ -29,6 +30,11 @@ defineProps(["image", "title", "link"]);
     font-weight: 800;
     line-height: 30px;
     color: $main-black;
+
+    @include md {
+      font-size: 16px;
+      line-height: 20px;
+    }
   }
 }
 </style>

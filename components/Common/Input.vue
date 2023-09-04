@@ -25,10 +25,20 @@ input.input(:value="inputValue" @input="handleInput" :placeholder="placeholder ?
 
   transition: border-bottom $transition;
 
+  @include md {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
   &::placeholder {
     font-size: 18px;
     font-weight: 400;
     color: $main-gray;
+
+    @include md {
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
 
   &:focus,

@@ -30,7 +30,15 @@ useHead({
   grid-auto-rows: 1fr;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
+  justify-items: center;
 
   margin-bottom: 200px;
+
+  @include lg {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include responsive(960) {
+    grid-template-columns: 1fr;
+  }
 }
 </style>

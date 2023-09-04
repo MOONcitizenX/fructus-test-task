@@ -21,12 +21,24 @@ section.list-section.section
     font-weight: 800;
     line-height: 46px;
     color: $main-black;
+
+    @include md {
+      font-size: 18px;
+      line-height: 24px;
+    }
   }
 
   &__block {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+    justify-items: center;
+    @include lg {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include responsive(960) {
+      grid-template-columns: 1fr;
+    }
   }
 }
 </style>

@@ -23,8 +23,13 @@ section.section.intro-section
   gap: 30px;
   align-items: center;
 
+  @include responsive(1060) {
+    flex-direction: column-reverse;
+  }
+
   &__image {
-    border-top-right-radius: 50%;
+    width: 100%;
+    border-top-right-radius: 20%;
     object-fit: cover;
     font-size: 0;
   }
@@ -41,6 +46,10 @@ section.section.intro-section
       color: $main-black;
 
       margin-bottom: 30px;
+      @include md {
+        font-size: 24px;
+        line-height: 30px;
+      }
     }
 
     &-info-block {
@@ -55,6 +64,11 @@ section.section.intro-section
       line-height: 20px;
       color: $main-gray;
 
+      @include md {
+        font-size: 12px;
+        line-height: 16px;
+      }
+
       & .text-block {
         display: flex;
         justify-content: flex-start;
@@ -68,6 +82,10 @@ section.section.intro-section
       font-weight: 400;
       line-height: 26px;
       color: $main-black;
+      @include md {
+        font-size: 14px;
+        line-height: 18px;
+      }
     }
   }
 }

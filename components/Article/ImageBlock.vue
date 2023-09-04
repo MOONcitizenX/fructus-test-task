@@ -15,7 +15,7 @@ section.section.image-section
   gap: 15px;
 
   &__image {
-    border-top-right-radius: 50%;
+    border-top-right-radius: 20%;
   }
 
   &__caption {
