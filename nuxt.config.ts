@@ -18,21 +18,8 @@ export default defineNuxtConfig({
         autoImports: ["defineStore", "acceptHMRUpdate"],
       },
     ],
-    "@nuxtjs/google-fonts",
+    "nuxt-swiper",
   ],
-  googleFonts: {
-    families: {
-      Montserrat: {
-        wght: [300, 400, 800],
-        ital: [300],
-      },
-    },
-    display: "auto",
-    subsets: ["latin", "cyrillic"],
-    prefetch: true,
-    preconnect: true,
-    preload: true,
-  },
   imports: {
     dirs: ["stores", "utils"],
   },

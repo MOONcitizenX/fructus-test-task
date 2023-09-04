@@ -10,13 +10,13 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
-    "@nuxtjs/google-fonts": "^3.0.2",
     "nuxt": "^3.7.0",
     "sass": "^1.66.1",
     "vite-plugin-pug": "^0.3.2"
   },
   "dependencies": {
     "@pinia/nuxt": "^0.4.11",
+    "nuxt-swiper": "^1.2.2",
     "pinia": "^2.1.6"
   }
 }

@@ -1,6 +1,5 @@
 <script setup>
 import { useFetch } from "nuxt/app";
-
 const { id } = useRoute().params;
 
 const { data } = await useFetch(API_URL, {
@@ -28,6 +27,12 @@ useHead({
 </script>
 
 <template lang="pug">
-div {{ data.meta.title }}
-
+.container.article-container
+  component(:is="getArticleBlock(block.type)" v-for="block in data.body" :key="block.id" :data="block.data")
 </template>
+
+<style lang="scss">
+.article-container {
+  margin-bottom: 200px;
+}
+</style>

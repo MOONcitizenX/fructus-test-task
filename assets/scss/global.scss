@@ -20,3 +20,7 @@ html {
   max-width: $lg;
   margin: 0 auto;
 }
+
+.section:not(:last-child) {
+  margin-bottom: 100px;
+}

@@ -10,10 +10,10 @@ const handleSubmit = () => {
 </script>
 
 <template lang="pug">
-form.subscribe-form(@submit.prevent)
+form.section.subscribe-form(@submit.prevent)
   h3.subscribe-form__title Подпишись на рассылку
   .subscribe-form__input-block
-    common-input(type="email" placeholder="Email" :inputValue="inputValue" @input="handleInput")
+    common-input(type="email" placeholder="Email" :inputValue="inputValue" @input="handleInput" :required="true")
     common-button(text="Подписаться" type="submit" :onClick="handleSubmit")
 
 </template>
