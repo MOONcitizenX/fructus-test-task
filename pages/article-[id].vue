@@ -34,5 +34,8 @@ useHead({
 <style lang="scss">
 .article-container {
   margin-bottom: 200px;
+  @include md {
+    margin-bottom: 80px;
+  }
 }
 </style>

@@ -25,4 +25,7 @@ html {
 
 .section:not(:last-child) {
   margin-bottom: 100px;
+  @include md {
+    margin-bottom: 60px;
+  }
 }

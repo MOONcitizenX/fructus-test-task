@@ -9,17 +9,17 @@ section.section.text-section(v-html="data")
 <style lang="scss">
 .text-section {
   width: 66%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   @include md {
     width: 100%;
   }
 
   h2 {
-    margin: 0 0 50px;
+    margin-bottom: 50px;
     @include md {
       font-size: 18px;
       line-height: 24px;
+      margin-bottom: 20px;
     }
   }
 

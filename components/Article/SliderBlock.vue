@@ -20,15 +20,30 @@ swiper.swiper.section(:modules="modules" :slides-per-view="1" :pagination="{type
   &__image {
     width: 100%;
     padding: 0 7rem;
+    @include md {
+      padding: 0;
+    }
   }
   &-button-next,
   &-button-prev {
     background-color: $main-black !important;
     width: 60px;
     height: 60px;
+
+    transition: transform $transition;
+    @include md {
+      width: 30px;
+      height: 30px;
+    }
+    &:hover {
+      transform: scale(1.1);
+    }
     &::after {
       color: $main-white;
       font-size: 16px !important;
+      @include md {
+        font-size: 12px !important;
+      }
     }
   }
 }
