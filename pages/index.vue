@@ -7,8 +7,6 @@ const { data } = await useFetch(API_URL, {
   },
 });
 
-onMounted(() => console.log(data.value));
-
 useHead({
   title: data.value.meta.title,
   meta: [
