@@ -29,6 +29,7 @@ section.section.intro-section
 
   &__image {
     width: 100%;
+    height: auto;
     border-top-right-radius: 20%;
     object-fit: cover;
     font-size: 0;
