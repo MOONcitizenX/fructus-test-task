@@ -19,7 +19,7 @@ useHead({
 </script>
 
 <template lang="pug">
-.cards-container.container
+.container.cards-container
   article-card(v-for="article in data.body[0].data.articles" :key="article.link" :image="article.image" :title="article.title" :link="article.link")
 </template>
 

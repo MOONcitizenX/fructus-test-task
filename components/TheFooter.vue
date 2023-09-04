@@ -9,7 +9,7 @@ const icons = ref([
 
 <template lang="pug">
 footer.wrapper.footer-wrapper
-  .footer-container.container
+  .container.footer-container
     section.footer-top
       .footer-description
         nuxt-link(to="/")

@@ -3,7 +3,7 @@ defineProps(["data"]);
 </script>
 
 <template lang="pug">
-section.list-section.section
+section.section.list-section
   h3.list-section__title {{data.title}}
   .list-section__block
     article-card(v-for="article in data.articles" :key="article.link" :image="article.image" :title="article.title" :link="article.link")
