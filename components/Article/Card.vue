@@ -21,6 +21,7 @@ defineProps(["image", "title", "link"]);
   gap: 20px;
   &__image {
     width: 100%;
+    height: auto;
     object-fit: cover;
   }
   &__title {
