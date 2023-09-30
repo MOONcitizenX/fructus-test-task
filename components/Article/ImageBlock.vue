@@ -18,7 +18,8 @@ section.section.image-section
     width: 100%;
     height: auto;
     object-fit: cover;
-    border-top-right-radius: 20%;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
   }
 
   &__caption {
