@@ -23,4 +23,9 @@ export default defineNuxtConfig({
         "width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no",
     },
   },
+  runtimeConfig: {
+    public: {
+      apiBaseUrl: process.env.API_BASE_URL,
+    },
+  },
 });

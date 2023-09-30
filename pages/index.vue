@@ -1,7 +1,7 @@
 <script setup>
-import { useFetch } from "nuxt/app";
+const apiBaseUrl = useRuntimeConfig().public.apiBaseUrl;
 
-const { data } = await useFetch(API_URL, {
+const { data } = await useFetch(apiBaseUrl, {
   params: {
     path: "/",
   },

@@ -2,7 +2,9 @@
 import { useFetch } from "nuxt/app";
 const { id } = useRoute().params;
 
-const { data } = await useFetch(API_URL, {
+const apiBaseUrl = useRuntimeConfig().public.apiBaseUrl;
+
+const { data } = await useFetch(apiBaseUrl, {
   params: {
     path: "/article-" + id,
   },
